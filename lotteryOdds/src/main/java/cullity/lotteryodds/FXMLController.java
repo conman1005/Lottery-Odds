@@ -91,5 +91,6 @@ public class FXMLController implements Initializable {
             return;
         }
         System.out.println("Bought " + tickets + " tickets so finally win.");
+        lblTitle.setText("Bought " + tickets + " tickets to win");
     }
 }
