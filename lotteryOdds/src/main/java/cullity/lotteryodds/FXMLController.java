@@ -82,9 +82,14 @@ public class FXMLController implements Initializable {
         count.setCycleCount(Timeline.INDEFINITE);
         count.play();
     }
-
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        tickets = 0;
+        while (ThreadLocalRandom.current().nextInt(0, 292201338) != 1) {
+            tickets++;
+            return;
+        }
+        System.out.println("Bought " + tickets + " tickets so finally win.");
     }
 }
